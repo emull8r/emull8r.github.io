@@ -9,5 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
       - name: Deploy to GitHub Pages using gh-pages
         run: npm run deploy
