@@ -1,1 +1,0 @@
-This project will serve as my portfolio site. Currently, it is a work in progress.
