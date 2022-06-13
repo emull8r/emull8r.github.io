@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/public/index.html/static/css/main.97b49047.css",
-    "main.js": "/public/index.html/static/js/main.5071fce9.js",
-    "static/js/787.1135e57f.chunk.js": "/public/index.html/static/js/787.1135e57f.chunk.js",
-    "index.html": "/public/index.html/index.html",
-    "main.97b49047.css.map": "/public/index.html/static/css/main.97b49047.css.map",
-    "main.5071fce9.js.map": "/public/index.html/static/js/main.5071fce9.js.map",
-    "787.1135e57f.chunk.js.map": "/public/index.html/static/js/787.1135e57f.chunk.js.map"
+    "main.css": "/emull8r.github.io/static/css/main.97b49047.css",
+    "main.js": "/emull8r.github.io/static/js/main.119c8d80.js",
+    "static/js/787.1135e57f.chunk.js": "/emull8r.github.io/static/js/787.1135e57f.chunk.js",
+    "index.html": "/emull8r.github.io/index.html",
+    "main.97b49047.css.map": "/emull8r.github.io/static/css/main.97b49047.css.map",
+    "main.119c8d80.js.map": "/emull8r.github.io/static/js/main.119c8d80.js.map",
+    "787.1135e57f.chunk.js.map": "/emull8r.github.io/static/js/787.1135e57f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.97b49047.css",
-    "static/js/main.5071fce9.js"
+    "static/js/main.119c8d80.js"
   ]
 }
