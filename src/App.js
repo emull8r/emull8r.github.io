@@ -4,6 +4,8 @@ import Navbar from './components/navbar';
 import Home from './pages';
 import About from './pages/about';
 import Contact from './pages/contact';
+import { Routes, Route} from 'react-router-dom';
+
 
 function App() {
   return (
