@@ -24,7 +24,7 @@ const [dropdown, setDropdown] = useState(false);
      />
     </>
    ) : (
-    <a href={items.path}>{items.title}</a>
+    <a href={items.title.toLowerCase()}>{items.title}</a>
    )}
   </li>
  );

@@ -1,27 +1,21 @@
 export const menuItemsData = [
     {
-        title: "Home",
-        path: ""
+        title: "Home"
     },
     {
-        title: "About",
-        path: "about"
+        title: "About"
     },
     {
-        title: "Contact",
-        path: "contact"
+        title: "Contact"
     },
     {
         title: "Gallery",
-        path: "gallery",
         submenu: [
             {
-            title: "Comics",
-            path: "gallery/comics",
+            title: "Comics"
             },
             {
-            title: "Creations",
-            path: "gallery/creations",
+            title: "Creations"
             },
         ]
     },
