@@ -4,6 +4,7 @@ import { useState } from "react";
 
 const MenuItems = ({ items }) => {
 const [dropdown, setDropdown] = useState(false);
+
  return (
   <li className="menu-items">
    {items.submenu ? (
@@ -18,12 +19,12 @@ const [dropdown, setDropdown] = useState(false);
       
      </button>
      <Dropdown 
-     submenus={items.submenu} 
+     submenus={items.submenu}
      dropdown={dropdown}
      />
     </>
    ) : (
-    <a href="/#">{items.title}</a>
+    <a href={items.path}>{items.title}</a>
    )}
   </li>
  );
