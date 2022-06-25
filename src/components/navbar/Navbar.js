@@ -1,11 +1,11 @@
 import React from 'react';
 import { menuItemsData } from './MenuItemsData';
-import MenuItems from "./MenuItems";
+import MenuItems from './MenuItems';
 
 const Navbar = () => {
  return (
   <nav>
-   <ul className="menus">
+   <ul className='menus'>
     {menuItemsData.map((menu, index) => {
      return <MenuItems items={menu} key={index} />;
     })}

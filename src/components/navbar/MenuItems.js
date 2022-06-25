@@ -1,21 +1,22 @@
 import React from 'react';
-import Dropdown from "./Dropdown";
-import { useState } from "react";
+import Dropdown from './Dropdown';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const MenuItems = ({ items }) => {
 const [dropdown, setDropdown] = useState(false);
 
  return (
-  <li className="menu-items">
+  <li className='menu-items'>
    {items.submenu ? (
     <>
      <button 
-     type="button" 
-     aria-haspopup="menu"
-     aria-expanded={dropdown ? "true" : "false"}
+     type='button' 
+     aria-haspopup='menu'
+     aria-expanded={dropdown ? 'true' : 'false'}
      onClick={() => setDropdown((prev) => !prev)}
       >
-      {items.title}{" "}
+      {items.title}{' '}
       
      </button>
      <Dropdown 
@@ -24,7 +25,7 @@ const [dropdown, setDropdown] = useState(false);
      />
     </>
    ) : (
-    <a href={items.title.toLowerCase()}>{items.title}</a>
+    <Link to={items.path}>{items.title}</Link>
    )}
   </li>
  );

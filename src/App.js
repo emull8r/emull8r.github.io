@@ -16,11 +16,11 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' exact element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/gallery' element={<Gallery />} />
-          <Route path='/creations' element={<Creations />} />
-          <Route path='/comics' element={<Comics />} />
+          <Route path='/about' exact element={<About />} />
+          <Route path='/contact' exact element={<Contact />} />
+          <Route path='/gallery' exact element={<Gallery />} />
+          <Route path='/creations' exact element={<Creations />} />
+          <Route path='/comics' exact element={<Comics />} />
         </Routes>
       </div>
   );
