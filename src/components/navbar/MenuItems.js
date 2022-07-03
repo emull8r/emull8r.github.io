@@ -27,6 +27,11 @@ const MenuItems = ({ items }) => {
         };
     }, [dropdown]);
 
+    const handleClick = (path) => {
+
+        console.log("Going to "+path);
+    }
+
     return (
     <li className='menu-items' ref={ref}>
     {items.submenu ? (
@@ -46,7 +51,7 @@ const MenuItems = ({ items }) => {
         />
         </>
     ) : (
-        <Link to={items.path}>{items.title}</Link>
+        <Link to={items.path} onClick={() => handleClick(items.path)}>{items.title}</Link>
     )}
   </li>
  );
