@@ -7,7 +7,10 @@ export default class NavigationComponent extends Component {
 
         super(props);
 
-        this.toggleDropdown = this.toggleDropdown.bind(this);
+        this.setDropdown = this.setDropdown.bind(this);
+
+        this.wrapperRef = React.createRef();
+        this.handleClickOutside = this.handleClickOutside.bind(this);
 
         this.state = {
             dropdown: false
@@ -17,24 +20,36 @@ export default class NavigationComponent extends Component {
 
     componentDidMount = () => {
 
+        document.addEventListener("mousedown", this.handleClickOutside);
+        document.addEventListener("touchstart", this.handleClickOutside);
+
         this.setState({
             dropdown: false
         });
         
     }
 
-    toggleDropdown = () => {
+    componentWillUnmount() {
+        document.removeEventListener("mousedown", this.handleClickOutside);
+        document.removeEventListener("touchstart", this.handleClickOutside);
+    }
 
-        let toggle = !this.state.dropdown;
+    handleClickOutside(event) {
+        if (this.wrapperRef && !this.wrapperRef.current.contains(event.target)) {
+            this.setDropdown(false);
+        }
+    }
 
-        this.setState({dropdown: toggle});
-    };
+    setDropdown = (value) => {
+        
+        this.setState({dropdown: value});
+    }
 
     render() {
 
         return(
             <nav>
-                <ul className='menus'>
+                <ul className='menus' ref={this.wrapperRef}>
                     <li className='menu-items'>
                         <Link to='/'>Home</Link>
                     </li>
@@ -45,13 +60,13 @@ export default class NavigationComponent extends Component {
                         <Link to='/contact'>Contact</Link>
                     </li>
                     <li className='menu-items'>
-                        <button onClick={() => this.toggleDropdown()}>Gallery</button>
+                        <button onClick={() => this.setDropdown(!this.state.dropdown)}>Gallery</button>
                         <ul className={`dropdown ${this.state.dropdown ? 'show' : ''}`}>
                             <li className='menu-items'>
-                                <Link to='/comics' onClick={() => this.toggleDropdown()}>Comics</Link>
+                                <Link to='/comics' onClick={() => this.setDropdown(false)}>Comics</Link>
                             </li>
                             <li className='menu-items'>
-                                <Link to='/creations' onClick={() => this.toggleDropdown()}>Creations</Link>
+                                <Link to='/creations' onClick={() => this.setDropdown(false)}>Creations</Link>
                             </li>
                         </ul>
                     </li>
