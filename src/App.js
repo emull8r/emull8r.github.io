@@ -7,13 +7,13 @@ import Gallery from './pages/gallery';
 import Comics from './pages/gallery/comics';
 import Creations from './pages/gallery/creations';
 import { Routes, Route} from 'react-router-dom';
-import Navbar from './components/navbar/Navbar';
+import NavigationComponent from './components/navigation/Navigation';
 
 
 function App() {
   return (
       <div>
-        <Navbar />
+        <NavigationComponent />
         <Routes>
           <Route path='/' exact element={<Home />} />
           <Route path='/about' exact element={<About />} />
