@@ -1,4 +1,4 @@
-export const menuItemsData = [
+export const navbarItemsData = [
     {
         title: 'Home',
         path: '/'
@@ -13,7 +13,7 @@ export const menuItemsData = [
     },
     {
         title: 'Gallery',
-        path: '/gallery',
+        path: '',
         submenu: [
             {
             title: 'Comics',
