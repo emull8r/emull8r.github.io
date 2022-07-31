@@ -1,1 +1,1 @@
-This project will serve as my portfolio site. Currently, it is a work in progress.
+An example GitHub Pages website made with React.
