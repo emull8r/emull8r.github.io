@@ -1,5 +1,4 @@
-/* Colors: #CCCCCC, #4D4D4D, #757575 */
-
+/* Color scheme: grayish */
 
 * {
   margin: 0;
@@ -8,15 +7,26 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: monospace, sans-serif;
   color: "#FFFFFF";
-  background: #7D7D7D;
+  background: #8D8D8D;
+}
+
+div {
+  margin: auto 1em;
+}
+
+p {
+  margin: 1em 0;
+}
+
+ul {
+  margin: auto 1em;
 }
 
 header {
   height: 58px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  color: #ffffff;
 }
 
 .nav-area {
@@ -43,7 +53,7 @@ header {
 
 .menu-items {
   position: relative;
-  font-size: 14px;
+  font-size: 14pt;
 }
 
 .menu-items a {
