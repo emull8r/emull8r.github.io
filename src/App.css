@@ -9,13 +9,14 @@
 
 body {
   font-family: sans-serif;
-  background: #4D4D4D;
+  color: "#FFFFFF";
+  background: #7D7D7D;
 }
 
 header {
   height: 58px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  color: #212529;
+  color: #ffffff;
 }
 
 .nav-area {
@@ -37,6 +38,7 @@ header {
 .menus {
   display: flex;
   list-style: none;
+  color: "#FFFFFF";
 }
 
 .menu-items {
@@ -52,7 +54,7 @@ header {
 }
 
 .menu-items button {
-  color: inherit;
+  color: "#FFFFFF";
   font-size: inherit;
   border: none;
   background-color: transparent;
@@ -64,6 +66,7 @@ header {
 .menu-items button {
   text-align: left;
   padding: 0.7rem 1rem;
+  color: "#FFFFFF";
 }
 
 .menu-items a:hover,

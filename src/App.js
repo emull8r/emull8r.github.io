@@ -5,6 +5,8 @@ import About from './pages/about';
 import Contact from './pages/contact';
 import Comics from './pages/gallery/comics';
 import Creations from './pages/gallery/creations';
+import Games from './pages/fun/games';
+import Quizzes from './pages/fun/quizzes';
 import { Routes, Route} from 'react-router-dom';
 import NavbarComponent from './components/navigation/Navbar';
 
@@ -19,6 +21,8 @@ function App() {
           <Route path='/contact' exact element={<Contact />} />
           <Route path='/creations' exact element={<Creations />} />
           <Route path='/comics' exact element={<Comics />} />
+          <Route path='/games' exact element={<Games />} />
+          <Route path='/quizzes' exact element={<Quizzes />} />
         </Routes>
       </div>
   );

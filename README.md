@@ -1,1 +1,1 @@
-An example GitHub Pages website made with React.
+My personal portfolio for LEGO and code -related things.

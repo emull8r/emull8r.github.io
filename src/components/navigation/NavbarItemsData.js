@@ -25,4 +25,18 @@ export const navbarItemsData = [
             },
         ]
     },
+    {
+        title: 'Fun',
+        path: '',
+        submenu: [
+            {
+            title: 'Quizzes',
+            path: '/quizzes'
+            },
+            {
+            title: 'Games',
+            path: '/games'
+            },
+        ]
+    }
    ];
