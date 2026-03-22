@@ -50,7 +50,7 @@ export default class DropdownComponent extends Component {
 
         return(
             <li className='menu-items' ref={this.wrapperRef}>
-                <button onClick={() => this.setDropdown(!this.state.dropdown)}>Gallery</button>
+                <button onClick={() => this.setDropdown(!this.state.dropdown)}>{this.props.item.title}</button>
                 <ul className={`dropdown ${this.state.dropdown ? 'show' : ''}`}>
                     {this.state.item.submenu.map((submenu, index) => (
                     <li key={index} className='menu-items'>
