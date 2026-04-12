@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<!----------------------------------
+
+Evan Mulloy, AKA Bricknave, 2011-now
+
+------------------------------------>
+
+<html>
+
+<head>
+<title>Which kind of LEGO theme are you? (Quiz)</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="keywords" content="lego, LEGO, bricknave, Bricknave, lego reviews, lego games, lego quizzes, lego mocs, lego creations, lego models, lego builds, which lego theme are you, lego theme personality test, lego theme quiz"/>
+<link rel="stylesheet" type="text/css" href="Bricknave_Style.css" />
+
+<link rel="shortcut icon" href="http://www.Bricknave.net/pics/website/Bricknave_Favicon.gif" />
+
+<script src="googleAnalytics.js"></script>
+
+<div class="header">
+<img src="pics/website/Header.png"></img>
+</div>
+<div class="nav">
+<ul><li><a href="Home.html">Home</a></li><li><a href="Gallery.html">Gallery</a></li><li><a href="About.html">About</a></li><li><a href="Follow_Me.html">Follow me</a></li><li><a href="Fun.html">Fun</a></li></ul>
+</div>
+</head>
+<body>
+
+
+
+<form name="quiz" action="Bricknave_LEGO_theme_personality.php" method="post" onsubmit="return radio_validate()">
+
+<h3>Which kind of original (non-licensed) LEGO theme are you?</h3>
+<br />
+
+<img class="main" src="pics/All_Themes.jpg" ></img>
+
+<h3>Take this quiz to find out!</h3>
+<br />
+<h4>What is your main quality?</h4>
+<label><input type="radio" name="question_a" value="action"/>I'm entertaining!</label>
+
+<label><input type="radio" name="question_a" value="down_to_earth"/>I am down to Earth.</label><!--Give same score to town, little bit of score to technic -->
+
+<label><input type="radio" name="question_a" value="creator" />I can fill any role.</label>
+
+<label><input type="radio" name="question_a" value="technic"/>I am very ingenuitive.</label>
+
+<label><input type="radio" name="question_a" value="space"/>I look to the skies and beyond for inspiration.</label>
+
+<h4>What is your stance on Minifigs?</h4>
+<label><input type="radio" name="question_b" value="minifigs" />I need them!</label>
+
+<label><input type="radio" name="question_b" value="technic" />I don't use them often.</label>
+
+<label><input type="radio" name="question_b" value="creator" />I use them for some models here and there.</label>
+
+<h4>How complex do you prefer your sets to be?</h4>
+<label><input type="radio" name="question_c" value="technic" />I enjoy complexity, even with small sets.</label>
+
+<label><input type="radio" name="question_c" value="depends_on_set"  CHECKED />Depends on how big or small the set is.</label>
+
+<h4>What do you think about alternate models?</h4>
+<label><input type="radio" name="question_d" value="alts_yes" CHECKED />I love them!</label>
+
+<label><input type="radio" name="question_d" value="alts_no" />They're nice, but I don't need them.</label>
+
+<h4>What do you think about fantasies?</h4>
+<label><input type="radio" name="question_e" value="historical"/>I only like ones with magic and magical creatures.</label>
+
+<label><input type="radio" name="question_e" value="town"/>They're okay, I prefer down-to-Earth stuff though.</label>
+
+<label><input type="radio" name="question_e" value="creator" CHECKED  />Fantasy of any kind is fine with me.</label>
+
+<label><input type="radio" name="question_e" value="action"/>I'm okay with them as long as weaponized vehicles are included.</label>
+
+<label><input type="radio" name="question_e" value="space"/>I prefer ones without magic.</label>
+
+<h4>What is your stance on violence?</h4>
+<label><input type="radio" name="question_f" value="no_modern_weapons"/>I don't like modern weapons.</label>
+
+<label><input type="radio" name="question_f" value="town" CHECKED />Only if it is light violence with no projectile-based weaponry.</label>
+
+<label><input type="radio" name="question_f" value="prefer_peace" />I prefer peaceful scenarios.</label>
+
+<label><input type="radio" name="question_f" value="action"/>Yahhh-hooo! Violence! Lets go in gung-ho!</label>
+
+<h4>How do you like your vehicles?</h4>
+<label><input type="radio" name="question_g" value="creator"  CHECKED  />I like them big, sturdy, and with some functions!</label>
+
+<label><input type="radio" name="question_g" value="action"/>I like ones with big engines and even bigger weapons!</label>
+
+<label><input type="radio" name="question_g" value="no_modern_vehicles" />They must not be modern.</label>
+
+<label><input type="radio" name="question_g" value="town"/>They must be modern and somewhat peaceful.</label>
+
+<h4>What do you think about stories?</h4>
+<label><input type="radio" name="question_h" value="two_factions" />A story is good, and all you need for one is two warring factions.</label>
+
+<label><input type="radio" name="question_h" value="action"/>A story is essential, whether if it is only one comic or a TV special.</label>
+
+<label><input type="radio" name="question_h" value="make_own_story"  CHECKED />I like it when builders make up their own stories.</label>
+
+<button type="submit">Are you ready?<br />Click here to find out what kind of LEGO theme you are!</button>
+</form>
+
+<footer>
+<a href="http://www.LEGO.com">LEGO&reg;</a> is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site.
+The LEGO Brick is copyright & owned by TLG (The LEGO Group).
+</footer>
+</body>
+</html>

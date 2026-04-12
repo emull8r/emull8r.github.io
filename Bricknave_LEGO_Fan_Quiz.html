@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<!----------------------------------
+
+Evan Mulloy, AKA Bricknave, 2011-now
+
+------------------------------------>
+
+<html>
+
+<head>
+<title>What kind of LEGO Fan are you? (Quiz)</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="keywords" content="lego, LEGO, bricknave, Bricknave, lego reviews, lego games, lego quizzes, lego mocs, lego creations, lego models, lego builds, what kind of LEGO fan are you, lego fan quiz, lego fan personality test"/>
+<link rel="stylesheet" type="text/css" href="Bricknave_Style.css" />
+<link rel="shortcut icon" href="http://www.Bricknave.net/pics/website/Bricknave_Favicon.gif" />
+
+<script src="googleAnalytics.js"></script>
+
+<div class="header">
+<img src="pics/website/Header.png"></img>
+</div>
+<div class="nav">
+<ul><li><a href="Home.html">Home</a></li><li><a href="Gallery.html">Gallery</a></li><li><a href="About.html">About</a></li><li><a href="Follow_Me.html">Follow me</a></li><li><a href="Fun.html">Fun</a></li></ul>
+</div>
+</head>
+<body>
+
+<img class="main" src="pics/fan_quiz_question.jpg" ></img>
+<form name="quiz" action="Bricknave_LEGO_Fan_Quiz.php" method="post" onsubmit="return quiz_validate()">
+<h3>What type of LEGO fan are you?  Take this quiz to find out!</h3>
+<h4>What is your main strength?</h4>
+<label><input type="radio" name="question_a" value="reviewer" />I pay attention to detail.</label>
+<label><input type="radio" name="question_a" value="trader"/>I am good at making deals with people.</label>
+<label><input type="radio" name="question_a" value="mocer" CHECKED />I have an eye for aesthetics.</label>
+<label><input type="radio" name="question_a" value="customizer"/>I am good with tools.</label>
+<label><input type="radio" name="question_a" value="engineer"/>I'm great with gears, levers and motors.</label>
+<h4>What do you do with the stickers in your LEGO sets?</h4>
+<label><input type="radio" name="question_b" value="reviewer"/>Put them on the main model of the set as instructed for the full experience.</label>
+<label><input type="radio" name="question_b" value="trader" />Keep them to give to someone else sometime later.</label>
+<label><input type="radio" name="question_b" value="customizer"/>Find a way to use them for a small project, even if it means cutting them.</label>
+<label><input type="radio" name="question_b" value="mocer" />Either put them on a few bricks or none at all, as long as the bricks are still re-usable.</label>
+<label><input type="radio" name="question_b" value="neutral" CHECKED />Store them in a folder.</label>
+<h4>You have a motherload of the exact same piece!<br />What do you want to do with them?</h4>
+<label><input type="radio" name="question_c" value="mocer" />Keep them to use for a large project later.<br />&nbsp&nbsp&nbsp Who knows, maybe it would require tons of the same piece?</label>
+<label><input type="radio" name="question_c" value="reviewer" />Take a picture of one and talk about its usefulness.</label>
+<label><input type="radio" name="question_c" value="trader"/>Take a picture of it all, and use them as a bargaining chip for pieces I don't have.</label>
+<label><input type="radio" name="question_c" value="customizer"/>Modify a portion of them for a small project.</label>
+<label><input type="radio" name="question_c" value="neutral" CHECKED />Store them away, they might come in handy later.</label>
+<h4>You feel like making a special Minifig!<br />How would you create it, and what would you do with it?</h4>
+<label><input type="radio" name="question_d" value="mocer" />Create it without any custom-molded pieces, then possibly incorporate it into a vignette or diorama later.</label>
+<label><input type="radio" name="question_d" value="trader"/>Create it using pieces that are both unique and high in quantity, then sell it off.</label>
+<label><input type="radio" name="question_d" value="customizer" />Go beyond the limits of what has been factory made and create something really unique,<br />&nbsp&nbsp&nbsp then either take a picture of it by itself or with a MOC.</label>
+<label><input type="radio" name="question_d" value="reviewer"/>Incorporate pieces from the set I have recently opened, and use it in a review of the set as a bonus picture.</label>
+<label><input type="radio" name="question_d" value="neutral" CHECKED />I don't use Minifigs often, but if I wanted to make one, I'd most likely use purist methods.</label>
+<h4>You obtain a new LEGO set!<br />What is the first thing you do with it?</h4>
+<label><input type="radio" name="question_e" value="build_it" CHECKED />Build it, of course!</label>
+<label><input type="radio" name="question_e" value="trader"/>Check to see if there are any bricks I don't need that I could sell.</label>
+<label><input type="radio" name="question_e" value="customizer"/>Count all of the multiples of a certain piece to determine if I have enough to modify for a project.</label>
+<label><input type="radio" name="question_e" value="mocer"/>Memorize any new building techniques, and begin visualizing the different ways to use the bricks.</label>
+<label><input type="radio" name="question_e" value="reviewer" />Take pictures of it and chat about the design quality of the set.</label>
+<label><input type="radio" name="question_e" value="neutral" />Build it, unless it is a set I only obtained for the parts.</label>
+<h4>You obtain the latest LEGO video game!<br />What are you going to do with it after playing through all the levels?</h4>
+<label><input type="radio" name="question_f" value="customizer"/>Unlock all the characters in the game to see the ones that haven't been made in real life.</label>
+<label><input type="radio" name="question_f" value="mocer"  />Look at some of the virtual brick-built models in the game to gain inspiration for my next masterpiece.</label>
+<label><input type="radio" name="question_f" value="reviewer"/>Analyze every aspect of the game so I could give my opinion of it to my friends.</label>
+<label><input type="radio" name="question_f" value="trader" />Sell it a year or two later.</label>
+<label><input type="radio" name="question_f" value="no_games" CHECKED />I don't play video games.</label>
+<h4>Some horrible catastrophe has affected your LEGO Collection!<br />What do you worry about the most?</h4>
+<label><input type="radio" name="question_g" value="neutral" CHECKED />Holy moly, everything!</label>
+<label><input type="radio" name="question_g" value="trader" />My rare pieces! I hope they're still in mint condition!</label>
+<label><input type="radio" name="question_g" value="customizer"/>My Minifig parts and my tools! I hope they're still usable!</label>
+<label><input type="radio" name="question_g" value="mocer"  />All of my WIP (work-in-progress) projects, I hope I won't have to do too much rebuilding!</label>
+<label><input type="radio" name="question_g" value="reviewer"/>I hope my sets are still okay! Good thing most of my work is on the Internet.</label>
+<label><input type="radio" name="question_g" value="engineer"/>My motors and/or Mindstorms stuff, they're expensive!</label>
+<h4>You're going to a huge LEGO fan convention!<br />In addition to socializing, what are you looking forward to the most?</h4>
+<label><input type="radio" name="question_h" value="trader" />Getting a fantastic brick-related deal!</label>
+<label><input type="radio" name="question_h" value="reviewer"/>Looking at the latest upcoming LEGO set!</label>
+<label><input type="radio" name="question_h" value="customizer" />Checking out the custom accessory vendor stands!</label>
+<label><input type="radio" name="question_h" value="mocer" CHECKED />Learning new building techniques!</label>
+<label><input type="radio" name="question_h" value="engineer"/>Technic-related collaborations and/or Mindstorms competitions!</label>
+<button type="submit">Are you ready?<br />Click here to find out what kind of LEGO fan you are!</button>
+</form>
+<footer>
+<a href="http://www.LEGO.com">LEGO&reg;</a> is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site.
+The LEGO Brick is copyright & owned by TLG (The LEGO Group).
+</footer>
+</body>
+</html>
