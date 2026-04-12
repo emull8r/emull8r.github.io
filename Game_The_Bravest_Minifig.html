@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<!----------------------------------
+
+Evan Mulloy, AKA Bricknave, 2011-now
+
+------------------------------------>
+
+<html>
+
+<head>
+<title>Bricknave.net - Game</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="keywords" content="lego, LEGO, bricknave, Bricknave, lego reviews, lego games, lego quizzes, lego mocs, lego creations, lego models, lego builds, lego game, free lego online game, free lego game, lego unity game, unity" />
+<link rel="stylesheet" type="text/css" href="Bricknave_Style.css" />
+
+<link rel="shortcut icon" href="http://www.Bricknave.net/pics/website/Bricknave_Favicon.gif" />
+
+<script src="googleAnalytics.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
+<script type="text/javascript">
+<!--
+var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+if (document.location.protocol == 'https:')
+	unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+-->
+</script>
+<script type="text/javascript">
+<!--
+	var config = {
+		width: 960, 
+		height: 600,
+		params: { enableDebugging:"1" }
+		
+	};
+	var u = new UnityObject2(config);
+
+	jQuery(function() {
+
+		var $missingScreen = jQuery("#unityPlayer").find(".missing");
+		var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+		$missingScreen.hide();
+		$brokenScreen.hide();
+		
+		u.observeProgress(function (progress) {
+			switch(progress.pluginStatus) {
+				case "broken":
+					$brokenScreen.find("a").click(function (e) {
+						e.stopPropagation();
+						e.preventDefault();
+						u.installPlugin();
+						return false;
+					});
+					$brokenScreen.show();
+				break;
+				case "missing":
+					$missingScreen.find("a").click(function (e) {
+						e.stopPropagation();
+						e.preventDefault();
+						u.installPlugin();
+						return false;
+					});
+					$missingScreen.show();
+				break;
+				case "installed":
+					$missingScreen.remove();
+				break;
+				case "first":
+				break;
+			}
+		});
+		u.initPlugin(jQuery("#unityPlayer")[0], "The_Bravest_Minifig.unity3d");
+	});
+-->
+</script>
+
+<div class="header">
+<img src="pics/website/Header.png"></img>
+</div>
+<div class="nav">
+<ul><li><a href="Home.html">Home</a></li><li><a href="Gallery.html">Gallery</a></li><li><a href="About.html">About</a></li><li><a href="Follow_Me.html">Follow me</a></li><li><a href="Fun.html">Fun</a></li></ul>
+</div>
+</head>
+<body>
+
+<div class="content">
+<div id="unityPlayer">
+<div class="missing">
+<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+</a>
+</div>
+<div class="broken">
+<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
+</a>
+</div>
+</div>
+</div>
+
+<footer>
+<a href="http://www.LEGO.com">LEGO&reg;</a> is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site.
+The LEGO Brick is copyright & owned by TLG (The LEGO Group).
+</footer>
+</body>
+</html>

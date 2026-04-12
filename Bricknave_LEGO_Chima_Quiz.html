@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<!----------------------------------
+
+Evan Mulloy, AKA Bricknave, 2011-now
+
+------------------------------------>
+
+<html>
+
+<head>
+<title>Which Chima tribe would you fit into?</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="keywords" content="lego, LEGO, bricknave, Bricknave, lego reviews, lego games, lego quizzes, lego mocs, lego creations, lego models, lego builds, lego quiz, chima, legends of chima, chima quiz, chima tribe quiz, which chima tribe would you be, which chima tribe would you fit into, lego chima"/>
+<link rel="stylesheet" type="text/css" href="Bricknave_Style.css" />
+<link rel="shortcut icon" href="http://www.Bricknave.net/pics/website/Bricknave_Favicon.gif" />
+
+<script src="googleAnalytics.js"></script>
+
+<div class="header">
+<img src="pics/website/Header.png"></img>
+</div>
+<div class="nav">
+<ul><li><a href="Home.html">Home</a></li><li><a href="Gallery.html">Gallery</a></li><li><a href="About.html">About</a></li><li><a href="Follow_Me.html">Follow me</a></li><li><a href="Fun.html">Fun</a></li></ul>
+</div>
+</head>
+<body>
+<img class="main" src="pics/Chima_Poster.jpg"></img>
+<form name="quiz" action="Bricknave_LEGO_Chima_Quiz.php" method="post">
+<h3>Which Chima tribe would you fit into?  Take this quiz to find out!</h3>
+<h4>What is your best trait?</h4>
+<label><input type="radio" name="question_a" value="responsible" />I'm responsible.</label><!--Lions-->
+<label><input type="radio" name="question_a" value="wise"/>I'm wise.</label><!--Eagles-->
+<label><input type="radio" name="question_a" value="percerverant" CHECKED />I perservere.</label><!--Wolves-->
+<label><input type="radio" name="question_a" value="laid_back" CHECKED />I'm laid back.</label><!--Gorillas-->
+<label><input type="radio" name="question_a" value="no_best_trait"/>Best trait? Uhhh ... Hmmm ... I got nothing.</label><!--Ravens, Crocs-->
+<h4>You've been teleported into Chima, and you need a vehicle!<br />Which kind of vehicle would you prefer?</h4>
+<label><input type="radio" name="question_b" value="wheels"/>Anything with wheels!</label><!--Lions, Wolves, Crocs-->
+<label><input type="radio" name="question_b" value="air" />An aircraft!</label><!--Eagles, Ravens-->
+<label><input type="radio" name="question_b" value="water" CHECKED />A watercraft!</label><!--Crocs-->
+<label><input type="radio" name="question_b" value="air_and_land"/>Something that can both roll AND fly!</label><!--Eagles-->
+<label><input type="radio" name="question_b" value="arms_and_legs"/>Something with arms and legs!</label><!--Gorillas-->
+<label><input type="radio" name="question_b" value="neutral"/>I'd drive or pilot anything.</label><!--Neutral-->
+<h4>You're going to participate in a vehicle-based competition!<br />How do you plan to win?</h4>
+<label><input type="radio" name="question_c" value="fair_and_friendly" CHECKED  />Fair and square, with no hard feelings!</label><!--"Good-guy" tribes and Ravens-->
+<label><input type="radio" name="question_c" value="fair_and_aggressive" />By playing fair, but aggressively!</label><!--Crocs-->
+<label><input type="radio" name="question_c" value="by_cheating"/>Hehehe, how do you think? By cheating!</label><!--Wolves-->
+<label><input type="radio" name="question_c" value="any_way"/>Any way I can to get the reward! There is a reward, right?</label><!--Ravens-->
+<h4>You're going into battle!<br />Which kind of weapon would you prefer?</h4>
+<label><input type="radio" name="question_d" value="sword" />A big sword!</label><!--Lions, Crocs, Wolves-->
+<label><input type="radio" name="question_d" value="axe"/>A mighty axe!</label><!--Eagles, Wolves, Ravens-->
+<label><input type="radio" name="question_d" value="blunt"/>Something strong and blunt!</label><!--Gorillas-->
+<label><input type="radio" name="question_d" value="ranged"/>A ranged weapon, like a laser gun!</label><!--Ravens, Crocs, Lions-->
+<label><input type="radio" name="question_d" value="neutral" CHECKED />I'd fight with anything.</label><!--Neutral-->
+<h4>You need a base of operations to store your weapons and vehicles.<br />What kind of base would you prefer?</h4>
+<label><input type="radio" name="question_e" value="castle"/>A big and sturdy castle!</label><!--Lions, Eagles-->
+<label><input type="radio" name="question_e" value="mobile" />A mobile combat lair!</label><!--Wolves-->
+<label><input type="radio" name="question_e" value="hideout"/>A dark and hidden hideout!</label><!--Crocs-->
+<label><input type="radio" name="question_e" value="neutral" CHECKED />I don't know, any place I could call home?</label><!--Neutral, Gorillas-->
+<h4>Your vehicle needs a new paint job, but you can only obtain one bucket of paint!<br />Which color would you choose?</h4>
+<label><input type="radio" name="question_f" value="green" /><span style="color:green">Green</span></label><!--Crocs-->
+<label><input type="radio" name="question_f" value="yellow" CHECKED /><span style="color:yellow">Yellow</span></label><!--Lions-->
+<label><input type="radio" name="question_f" value="blue"/><span style="color:blue">Blue</span></label><!--Eagles-->
+<label><input type="radio" name="question_f" value="white"/><span style="color:white">White</span></label><!--Eagles-->
+<label><input type="radio" name="question_f" value="gray" /><span style="color:gray; background-color:black">Gray</span></label><!--Wolves, Gorillas-->
+<label><input type="radio" name="question_f" value="orange"/><span style="color:orange">Orange</span></label><!--Lions-->
+<label><input type="radio" name="question_f" value="red"/><span style="color:red">Red</span></label><!--Wolves, Ravens-->
+<label><input type="radio" name="question_f" value="black"/><span style="color:black">Black</span></label><!--Gorillas-->
+<h4>Which kind of tribe leader would you prefer following?</h4>
+<label><input type="radio" name="question_g" value="responsible" />One who is responsible.</label><!--Lions-->
+<label><input type="radio" name="question_g" value="wise"/>One who is wise.</label><!--Eagles-->
+<label><input type="radio" name="question_g" value="calm"/>One who is calm.</label><!--Gorillas-->
+<label><input type="radio" name="question_g" value="trinkets"/>One who'll give me trinkets and treasure!</label><!--Ravens-->
+<label><input type="radio" name="question_g" value="no_leader"/>Leader? I bow to no-one!</label><!--Wolves-->
+<label><input type="radio" name="question_g" value="neutral" CHECKED />I don't have a preference.</label><!--Neutral, Crocs-->
+<h4>You find a magical power source, but the guardians of said power sourcetell you to put it back where you found it. What do you do?</h4>
+<label><input type="radio" name="question_h" value="steal_it" />Steal it anyway!</label><!--"Bad-guy" tribes-->
+<label><input type="radio" name="question_h" value="put_it_back" CHECKED />Respect them and put the power source back where I found it.</label><!--"Good-guy" tribes-->
+<button type="submit">Are you ready?<br />Click here to find out which Chima tribe you'd fit into!</button>
+</form>
+<footer>
+<a href="http://www.LEGO.com">LEGO&reg;</a> is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site.
+The LEGO Brick is copyright & owned by TLG (The LEGO Group).
+</footer>
+</body>
+</html>
