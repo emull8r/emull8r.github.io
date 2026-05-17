@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .quiz-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .question {
+            margin-bottom: 25px;
+            display: none;
+        }
+        .question.active {
+            display: block;
+        }
+        .options {
+            margin-top: 15px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background-color: #f0f4f8;
+            border: 2px solid #cbd5e1;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: left;
+            transition: all 0.2s ease;
+        }
+        button:hover {
+            background-color: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+        #result-container {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        .restart-btn {
+            background-color: #10b981;
+            color: white;
+            border: none;
+            text-align: center;
+            font-weight: bold;
+        }
+        .restart-btn:hover {
+            background-color: #059669;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <!-- Question 1 -->
+    <div class="question active" id="q1">
+        <h2>1. How do you prefer to spend a free Saturday night?</h2>
+        <div class="options">
+            <button onclick="nextQuestion('A')">Going to a lively party or crowded event.</button>
+            <button onclick="nextQuestion('B')">Staying home with a book or watching a movie.</button>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question" id="q2">
+        <h2>2. When dealing with a difficult problem, you usually:</h2>
+        <div class="options">
+            <button onclick="nextQuestion('A')">Talk it out with friends or coworkers.</button>
+            <button onclick="nextQuestion('B')">Process it internally before sharing.</button>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question" id="q3">
+        <h2>3. After a long, exhausting week, you feel most recharged by:</h2>
+        <div class="options">
+            <button onclick="nextQuestion('A')">Socializing and catching up with people.</button>
+            <button onclick="nextQuestion('B')">Spending quiet time completely alone.</button>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div id="result-container">
+        <h2>Your Result:</h2>
+        <h1 id="result-title"></h1>
+        <p id="result-description"></p>
+        <button class="restart-btn" onclick="restartQuiz()">Take Quiz Again</button>
+    </div>
+</div>
+
+<script>
+    let currentQuestion = 1;
+    const totalQuestions = 3;
+    let scoreA = 0;
+    let scoreB = 0;
+
+    function nextQuestion(answer) {
+        if (answer === 'A') scoreA++;
+        if (answer === 'B') scoreB++;
+
+        document.getElementById(`q${currentQuestion}`).classList.remove('active');
+        currentQuestion++;
+
+        if (currentQuestion <= totalQuestions) {
+            document.getElementById(`q${currentQuestion}`).classList.add('active');
+        } else {
+            showResults();
+        }
+    }
+
+    function showResults() {
+        document.getElementById('result-container').style.display = 'block';
+        const title = document.getElementById('result-title');
+        const desc = document.getElementById('result-description');
+
+        if (scoreA > scoreB) {
+            title.innerText = "The Outgoing Extrovert";
+            desc.innerText = "You gain energy from the outside world! You thrive in social settings, love collaborating with others, and enjoy lively environments.";
+        } else {
+            title.innerText = "The Thoughtful Introvert";
+            desc.innerText = "You gain energy from within! You prefer deep, meaningful connections over large crowds, value your alone time, and do your best thinking independently.";
+        }
+    }
+
+    function restartQuiz() {
+        scoreA = 0;
+        scoreB = 0;
+        currentQuestion = 1;
+        document.getElementById('result-container').style.display = 'none';
+        document.getElementById('q1').classList.add('active');
+    }
+</script>
+
+</body>
+</html>
