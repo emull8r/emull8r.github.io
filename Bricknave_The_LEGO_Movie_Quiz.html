@@ -29,6 +29,94 @@ Evan Mulloy, AKA Bricknave, 2011-now
 <link rel="shortcut icon" href="http://www.Bricknave.net/pics/website/Bricknave_Favicon.gif" />
 
 <script src="googleAnalytics.js"></script>
+<script>
+function getAnswer(name){
+	var el = document.querySelector(`input[name="${name}"]:checked`);
+	return el? el.value : '';
+}
+function calculateQuiz(e){
+	e.preventDefault();
+	var qa=getAnswer('question_a');
+	var qb=getAnswer('question_b');
+	var qc=getAnswer('question_c');
+	var qd=getAnswer('question_d');
+	var qe=getAnswer('question_e');
+	var qf=getAnswer('question_f');
+	var qg=getAnswer('question_g');
+
+	var emmet=0, wyldstyle=0, vitruvius=0, unikitty=0, business=0, benny=0, batman=0, badcop=0, metalbeard=0;
+
+	switch(qa){
+		case 'yes': benny++; emmet++; metalbeard++; unikitty++; break;
+		case 'no': wyldstyle++; vitruvius++; batman++; badcop++; business++; break;
+	}
+	switch(qb){
+		case 'yes': benny++; unikitty++; batman++; break;
+		case 'no': emmet++; metalbeard++; wyldstyle++; vitruvius++; badcop++; business++; break;
+	}
+	switch(qc){
+		case 'imagination': benny++; emmet++; unikitty++; batman++; metalbeard++; wyldstyle++; vitruvius++; break;
+		case 'instructions': badcop++; business++; break;
+	}
+	switch(qd){
+		case 'nononsense': badcop++; break;
+		case 'easygoing': emmet++; break;
+		case 'bubbly': unikitty++; break;
+		case 'brooding': batman++; break;
+		case 'perfectionist': business++; break;
+		case 'hearty': metalbeard++; break;
+		case 'advisive': vitruvius++; break;
+		case 'passionate': benny++; break;
+		case 'focused': wyldstyle++; break;
+	}
+	switch(qe){
+		case 'reallylike': emmet++; metalbeard++; business++; batman++; /* fallthrough */
+		case 'like': badcop++; vitruvius++; wyldstyle++; benny++; unikitty++; break;
+	}
+	switch(qf){
+		case 'yes': badcop++; business++; emmet++; break;
+		case 'no': metalbeard++; batman++; vitruvius++; wyldstyle++; benny++; unikitty++; break;
+	}
+	switch(qg){
+		case 'black': badcop++; batman++; break;
+		case 'orange': emmet++; break;
+		case 'white': vitruvius++; break;
+		case 'magenta': wyldstyle++; break;
+		case 'blue': unikitty++; benny++; wyldstyle++; break;
+		case 'brown': metalbeard++; break;
+		case 'darkgray': batman++; break;
+		case 'red': business++; break;
+		case 'green': unikitty++; break;
+	}
+
+	var result = Math.max(business,emmet,unikitty,wyldstyle,vitruvius,benny,batman,badcop,metalbeard);
+	var out = '';
+	if(result===wyldstyle) out = "<br/><br/><img src='pics/TLM/Wyldstyle.jpg' /><br/><br/><span style='font-size:1.4em'>Wyldstyle!</span><br/>"+
+		"<textarea rows='3' cols='60' readonly onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_The_LEGO_Movie_Quiz.html'><img src='http://www.bricknave.net/pics/TLM/Wyldstyle_badge.jpg' /></a></textarea><br/>";
+	else if(result===unikitty) out = "<br/><br/><img src='pics/TLM/Princess_Unikitty.jpg' /><br/><br/><span style='font-size:1.4em'>Unikitty!</span><br/>"+
+		"<textarea rows='3' cols='60' readonly onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_The_LEGO_Movie_Quiz.html'><img src='http://www.bricknave.net/pics/TLM/Unikitty_badge.jpg' /></a></textarea><br/>";
+	else if(result===vitruvius) out = "<br/><br/><img src='pics/TLM/Vitruvius.jpg' /><br/><br/><span style='font-size:1.4em'>Vitruvius!</span><br/>"+
+		"<textarea rows='3' cols='60' readonly onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_The_LEGO_Movie_Quiz.html'><img src='http://www.bricknave.net/pics/TLM/Vitruvius_badge.jpg' /></a></textarea><br/>";
+	else if(result===emmet) out = "<br/><br/><img src='pics/TLM/Emmet.jpg' /><br/><br/><span style='font-size:1.4em'>Emmet!</span><br/>"+
+		"<textarea rows='3' cols='60' readonly onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_The_LEGO_Movie_Quiz.html'><img src='http://www.bricknave.net/pics/TLM/Emmet_badge.jpg' /></a></textarea><br/>";
+	else if(result===business) out = "<br/><br/><img src='pics/TLM/Lord_Business.jpg' /><br/><br/><span style='font-size:1.4em'>Lord Business!</span><br/>"+
+		"<textarea rows='3' cols='60' readonly onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_The_LEGO_Movie_Quiz.html'><img src='http://www.bricknave.net/pics/TLM/Lord_Business_badge.jpg' /></a></textarea><br/>";
+	else if(result===benny) out = "<br/><br/><img src='pics/TLM/Benny.jpg' /><br/><br/><span style='font-size:1.4em'>Benny!</span><br/>"+
+		"<textarea rows='3' cols='60' readonly onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_The_LEGO_Movie_Quiz.html'><img src='http://www.bricknave.net/pics/TLM/Benny_badge.jpg' /></a></textarea><br/>";
+	else if(result===batman) out = "<br/><br/><img src='pics/TLM/Batman.jpg' /><br/><br/><span style='font-size:1.4em'>Batman!</span><br/>"+
+		"<textarea rows='3' cols='60' readonly onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_The_LEGO_Movie_Quiz.html'><img src='http://www.bricknave.net/pics/TLM/Batman_badge.jpg' /></a></textarea><br/>";
+	else if(result===badcop) out = "<br/><br/><img src='pics/TLM/Badcop_2.jpg' /><br/><br/><span style='font-size:1.4em'>Badcop!</span><br/>"+
+		"<textarea rows='3' cols='60' readonly onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_The_LEGO_Movie_Quiz.html'><img src='http://www.bricknave.net/pics/TLM/Badcop_badge.jpg' /></a></textarea><br/>";
+	else if(result===metalbeard) out = "<br/><br/><img src='pics/TLM/Metalbeard.jpg' /><br/><br/><span style='font-size:1.4em'>Metalbeard!</span><br/>"+
+		"<textarea rows='3' cols='60' readonly onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_The_LEGO_Movie_Quiz.html'><img src='http://www.bricknave.net/pics/TLM/Metalbeard_badge.jpg' /></a></textarea><br/>";
+
+	document.getElementById('quizResult').innerHTML = out;
+	document.getElementById('quizResult').scrollIntoView({behavior:'smooth'});
+}
+document.addEventListener('DOMContentLoaded',function(){
+	var f = document.getElementById('quizForm'); if(f) f.addEventListener('submit', calculateQuiz);
+});
+</script>
 <div class="header">
 <img src="pics/website/Header.png"></img>
 </div>
@@ -38,7 +126,7 @@ Evan Mulloy, AKA Bricknave, 2011-now
 </head>
 <body>
 <img class="main" src="pics/TLM/LEGO_Movie_Poster.jpg"></img>
-<form name="quiz" action="Bricknave_The_LEGO_Movie_Quiz.php" method="post">
+<form id="quizForm">
 <h3>Which character from "The LEGO Movie" are you most like?  Take this quiz to find out!</h3>
 <h4>Choose a trait:</h4>
 <label><input type="radio" name="question_d" value="nononsense" />No-nonsense</label>
@@ -77,6 +165,9 @@ Evan Mulloy, AKA Bricknave, 2011-now
 <label><input type="radio" name="question_g" value="magenta" /><img src="pics/TLM/magenta.png" alt="magenta"></img></label>
 <button type="submit"><span style='font-size:1.4em'>Ready? Press this to see your result!</span></button>
 </form>
+
+<div id="quizResult"></div>
+
 <footer>
 <a href="http://www.LEGO.com">LEGO&reg;</a> is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site.
 The LEGO Brick is copyright & owned by TLG (The LEGO Group).
