@@ -240,9 +240,6 @@ function calculateQuiz(event) {
       "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'>[url=http://www.bricknave.net/Bricknave_LEGO_Piece_Quiz.html][img]http://www.bricknave.net/pics/piecequiz/pizza_badge.png[/img][/url]</textarea><br />";
   }
 
-  resultText += "<br />Oh, and hey, check out Brick Box!<br /><br />" +
-    "<a href='BrickBox.html' target='_blank'><img src='pics/BrickBoxScreenshot.png' /></a>";
-
   document.getElementById('quizResult').innerHTML = resultText;
   document.getElementById('quizResult').scrollIntoView({ behavior: 'smooth' });
 }
