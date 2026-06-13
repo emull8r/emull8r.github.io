@@ -156,7 +156,7 @@ function calculateQuiz(event) {
   var resultText = '';
 
   if (mocer === topScore) {
-    resultText = "Congratulations, you are the Purist MOCer!<br /><br />" +
+    resultText = "<h3>Congratulations, you are the Purist MOCer!</h3><br /><br />" +
       "<img src='pics/purist_mocer_vig.jpg' /><br /><br />A brilliant designer, your computer is cluttered with pictures of your past creations, and your brain is cluttered with ideas of your future creations!<br />" +
       "Whether you've created a vignette filled with nice part usages, or a diorama that is a seriously huge investment of parts, you can amaze people with your imagination!<br /><br />" +
       "Here is the HTML code for a Purist MOCer badge:<br /><br />" +
@@ -166,7 +166,7 @@ function calculateQuiz(event) {
       "Here is what it looks like:<br /><br />" +
       "<a href='http://www.bricknave.net/Bricknave_LEGO_Fan_Quiz.html'><img src='http://www.bricknave.net/pics/Purist_MOCer_Widget.jpg' /></a><br />";
   } else if (reviewer === topScore) {
-    resultText = "You are the most like the Reviewer archetype!<br /><br />" +
+    resultText = "<h3>You are the most like the Reviewer archetype!</h3><br /><br />" +
       "<img src='pics/Reviewer_Vignette.jpg' /><br /><br />" +
       "You know when and where to look for the latest set! Once you have your hands on it, you will make sure to alert your fellow fans whether they should pick it up or not.<br />" +
       "Your opinion benefits the Traders, Customizers and Purist MOCers in the LEGO community!<br /><br />" +
@@ -178,7 +178,7 @@ function calculateQuiz(event) {
       "Here is what it looks like:<br /><br />" +
       "<a href='http://www.bricknave.net/Bricknave_LEGO_Fan_Quiz.html'><img src='http://www.bricknave.net/pics/Reviewer_Widget.jpg' /></a><br />";
   } else if (trader === topScore) {
-    resultText = "You are the most like the Trader archetype!<br /><br />" +
+    resultText = "<h3>You are the most like the Trader archetype!</h3><br /><br />" +
       "<img src='pics/Trader_Vignette.jpg'/><br /><br />" +
       "Whether your trading post is online or at an event, you have rows of brick-hungry creators drooling at your feet, desperate to obtain a chunk of your stock.<br />" +
       "You play a vital part in the fan community, because you supply pieces to the MOCers and Customizers, and maybe even a set or two for the Reviewers.<br /><br />" +
@@ -190,7 +190,7 @@ function calculateQuiz(event) {
       "Here is what it looks like:<br /><br />" +
       "<a href='http://www.bricknave.net/Bricknave_LEGO_Fan_Quiz.html'><img src='http://www.bricknave.net/pics/Trader_Widget.jpg' /></a><br />";
   } else if (customizer === topScore) {
-    resultText = "You are the most like the Customizer archetype!<br /><br />" +
+    resultText = "<h3>You are the most like the Customizer archetype!</h3><br /><br />" +
       "<img src='pics/Bricknave_Customizer_Vignette.jpg' /><br /><br />" +
       "The plastic pieces you have just aren't enough for you --<br />-- you must sculpt, paint, and cut to discover the true potential of your masterpiece!<br />" +
       "Since you're willing you go beyond any limits, you have the power to take the basic form of a Minifig, and morph it into a complex character.<br /><br />" +
@@ -202,7 +202,7 @@ function calculateQuiz(event) {
       "Here is what it looks like:<br /><br />" +
       "<a href='http://www.bricknave.net/Bricknave_LEGO_Fan_Quiz.html'><img src='http://www.bricknave.net/pics/Customizer_Widget.jpg' /></a><br />";
   } else if (engineer === topScore) {
-    resultText = "You are the most like the Engineer archetype!<br /><br />" +
+    resultText = "<h3>You are the most like the Engineer archetype!</h3><br /><br />" +
       "<img src='pics/Engineer_Vignette.jpg' /><br /><br />" +
       "As a LEGO Fan who mostly specializes in things that move, you can amaze builders and non-builders alike.<br />" +
       "Aesthetics aren't your main priority, but your MOCs don't have to look pretty as long as they can move!<br /><br />" +
@@ -214,7 +214,8 @@ function calculateQuiz(event) {
       "Here is what it looks like:<br /><br />" +
       "<a href='http://www.bricknave.net/Bricknave_LEGO_Fan_Quiz.html'><img src='http://www.bricknave.net/pics/Engineer_Widget.jpg' /></a><br />";
   } else {
-    resultText = "<img src='pics/fan_quiz_question.jpg' /><br /><br />You are a unique kind of LEGO fan!";
+    resultText = "<h3>You are a unique kind of LEGO fan!</h3><br /><br />" +
+      "<img src='pics/fan_quiz_question.jpg' /><br /><br />";
   }
 
   document.getElementById('quizResult').innerHTML = resultText;

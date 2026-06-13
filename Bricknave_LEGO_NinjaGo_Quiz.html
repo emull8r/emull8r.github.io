@@ -19,6 +19,293 @@ Evan Mulloy, AKA Bricknave, 2011-now
 <link rel="shortcut icon" href="http://www.Bricknave.net/pics/website/Bricknave_Favicon.gif" />
 
 <script src="googleAnalytics.js"></script>
+<script>
+function getAnswer(name) {
+  var el = document.querySelector('input[name="' + name + '"]:checked');
+  return el ? el.value : '';
+}
+
+function calculateQuiz(event) {
+  event.preventDefault();
+
+  var qa = getAnswer('question_a');
+  var qb = getAnswer('question_b');
+  var qc = getAnswer('question_c');
+  var qd = getAnswer('question_d');
+  var qe = getAnswer('question_e');
+  var qf = getAnswer('question_f');
+  var qg = getAnswer('question_g');
+  var qh = getAnswer('question_h');
+  var qi = getAnswer('question_i');
+
+  var kai = 0;
+  var zane = 0;
+  var cole = 0;
+  var jay = 0;
+  var nya = 0;
+  var lloyd = 0;
+  var wu = 0;
+  var garmadon = 0;
+
+  switch (qa) {
+    case 'headstrong':
+      cole++;
+      lloyd++;
+      kai++;
+      garmadon++;
+      break;
+    case 'fierce':
+      nya++;
+      kai++;
+      garmadon++;
+      break;
+    case 'calm':
+      zane++;
+      wu++;
+      break;
+    case 'witty':
+      jay++;
+      break;
+    case 'compassionate':
+      lloyd++;
+      wu++;
+      break;
+    case 'intelligent':
+      jay++;
+      zane++;
+      nya++;
+      break;
+  }
+
+  switch (qb) {
+    case 'headstrong':
+      cole++;
+      lloyd++;
+      kai++;
+      garmadon++;
+      break;
+    case 'fierce':
+      nya++;
+      kai++;
+      garmadon++;
+      break;
+    case 'calm':
+      zane++;
+      wu++;
+      break;
+    case 'witty':
+      jay++;
+      break;
+    case 'compassionate':
+      lloyd++;
+      break;
+    case 'intelligent':
+      jay++;
+      zane++;
+      nya++;
+      break;
+  }
+
+  switch (qc) {
+    case 'armor':
+      garmadon++;
+      break;
+    case 'gi':
+      kai++;
+      zane++;
+      jay++;
+      wu++;
+      cole++;
+      lloyd++;
+      break;
+    case 'both':
+      nya++;
+      break;
+  }
+
+  switch (qd) {
+    case 'no':
+      garmadon++;
+      kai++;
+      wu++;
+      cole++;
+      lloyd++;
+      break;
+    case 'yes':
+      zane++;
+      nya++;
+      jay++;
+      break;
+  }
+
+  switch (qe) {
+    case 'big':
+      garmadon++;
+      break;
+    case 'few':
+      kai++;
+      zane++;
+      nya++;
+      jay++;
+      wu++;
+      cole++;
+      lloyd++;
+      break;
+  }
+
+  switch (qf) {
+    case 'no':
+      garmadon++;
+      nya++;
+      break;
+    case 'yes':
+      kai++;
+      zane++;
+      jay++;
+      wu++;
+      cole++;
+      lloyd++;
+      break;
+  }
+
+  switch (qg) {
+    case 'no':
+      garmadon++;
+      cole++;
+      nya++;
+      break;
+    case 'yes':
+      kai++;
+      wu++;
+      jay++;
+      zane++;
+      break;
+  }
+
+  switch (qh) {
+    case 'energy':
+      lloyd++;
+      garmadon++;
+      wu--;
+      lloyd++;
+      break;
+    case 'weapon':
+      kai++;
+      jay++;
+      zane++;
+      cole++;
+      nya++;
+      wu++;
+      break;
+  }
+
+  switch (qi) {
+    case 'yes':
+      lloyd++;
+      kai++;
+      jay++;
+      zane++;
+      cole++;
+      wu--;
+      wu--;
+      break;
+    case 'no':
+      nya++;
+      wu++;
+      lloyd--;
+      lloyd--;
+      garmadon++;
+      break;
+  }
+
+  var result = Math.max(nya, kai, jay, zane, cole, lloyd, wu, garmadon);
+  var resultText = '';
+
+  if (result === zane) {
+    resultText = "<br /><br /><img src='pics/Zane.jpg' /><br /><br />" +
+      "You are most like Zane, the intelligent Ninja of ice!<br /><br />" +
+      "Here is the HTML code for the badge:<br /><br />" +
+      "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html'><img src='http://www.bricknave.net/pics/Zane_badge.jpg' /></a></textarea><br /><br />" +
+      "Here is the BBCode for the badge:<br /><br />" +
+      "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'>[url=http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html][img]http://www.bricknave.net/pics/Zane_badge.jpg[/img][/url]</textarea><br /><br />" +
+      "Here is what it looks like:<br /><br />" +
+      "<a href='http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html'><img src='http://www.bricknave.net/pics/Zane_badge.jpg' /></a><br />";
+  } else if (result === jay) {
+    resultText = "<br /><br /><img src='pics/Jay.jpg' /><br /><br />" +
+      "You are most like Jay, the wisecracking Ninja of lightning!<br /><br />" +
+      "Here is the HTML code for the badge:<br /><br />" +
+      "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html'><img src='http://www.bricknave.net/pics/Jay_badge.jpg' /></a></textarea><br /><br />" +
+      "Here is the BBCode for the badge:<br /><br />" +
+      "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'>[url=http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html][img]http://www.bricknave.net/pics/Jay_badge.jpg[/img][/url]</textarea><br /><br />" +
+      "Here is what it looks like:<br /><br />" +
+      "<a href='http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html'><img src='http://www.bricknave.net/pics/Jay_badge.jpg' /></a><br />";
+  } else if (result === cole) {
+    resultText = "<br /><br /><img src='pics/Cole.jpg' /><br /><br />" +
+      "You are most like Cole, the tough Ninja of earth!<br /><br />" +
+      "Here is the HTML code for the badge:<br /><br />" +
+      "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html'><img src='http://www.bricknave.net/pics/Cole_badge.jpg' /></a></textarea><br /><br />" +
+      "Here is the BBCode for the badge:<br /><br />" +
+      "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'>[url=http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html][img]http://www.bricknave.net/pics/Cole_badge.jpg[/img][/url]</textarea><br /><br />" +
+      "Here is what it looks like:<br /><br />" +
+      "<a href='http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html'><img src='http://www.bricknave.net/pics/Cole_badge.jpg' /></a><br />";
+  } else if (result === kai) {
+    resultText = "<br /><br /><img src='pics/Kai.jpg' /><br /><br />" +
+      "You are most like Kai, the fierce Ninja of fire!<br /><br />" +
+      "Here is the HTML code for the badge:<br /><br />" +
+      "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html'><img src='http://www.bricknave.net/pics/Kai_badge.jpg' /></a></textarea><br /><br />" +
+      "Here is the BBCode for the badge:<br /><br />" +
+      "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'>[url=http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html][img]http://www.bricknave.net/pics/Kai_badge.jpg[/img][/url]</textarea><br /><br />" +
+      "Here is what it looks like:<br /><br />" +
+      "<a href='http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html'><img src='http://www.bricknave.net/pics/Kai_badge.jpg' /></a><br />";
+  } else if (result === nya) {
+    resultText = "<br /><br /><img src='pics/Nya.jpg' /><br /><br />" +
+      "You are most like Nya, a techie and secret Samurai!<br /><br />" +
+      "Here is the HTML code for the badge:<br /><br />" +
+      "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html'><img src='http://www.bricknave.net/pics/Nya_badge.jpg' /></a></textarea><br /><br />" +
+      "Here is the BBCode for the badge:<br /><br />" +
+      "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'>[url=http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html][img]http://www.bricknave.net/pics/Nya_badge.jpg[/img][/url]</textarea><br /><br />" +
+      "Here is what it looks like:<br /><br />" +
+      "<a href='http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html'><img src='http://www.bricknave.net/pics/Nya_badge.jpg' /></a><br />";
+  } else if (result === lloyd) {
+    resultText = "<br /><br /><img src='pics/Lloyd.jpg' /><br /><br />" +
+      "You are most like Lloyd, the mystical Green Ninja!<br /><br />" +
+      "Here is the HTML code for the badge:<br /><br />" +
+      "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html'><img src='http://www.bricknave.net/pics/Lloyd_badge.jpg' /></a></textarea><br /><br />" +
+      "Here is the BBCode for the badge:<br /><br />" +
+      "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'>[url=http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html][img]http://www.bricknave.net/pics/Lloyd_badge.jpg[/img][/url]</textarea><br /><br />" +
+      "Here is what it looks like:<br /><br />" +
+      "<a href='http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html'><img src='http://www.bricknave.net/pics/Lloyd_badge.jpg' /></a><br />";
+  } else if (result === wu) {
+    resultText = "<br /><br /><img src='pics/Wu.jpg' /><br /><br />" +
+      "You are most like Sensei Wu, a wise master of peace (and Spinjitzu)!<br /><br />" +
+      "Here is the HTML code for the badge:<br /><br />" +
+      "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html'><img src='http://www.bricknave.net/pics/Wu_badge.jpg' /></a></textarea><br /><br />" +
+      "Here is the BBCode for the badge:<br /><br />" +
+      "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'>[url=http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html][img]http://www.bricknave.net/pics/Wu_badge.jpg[/img][/url]</textarea><br /><br />" +
+      "Here is what it looks like:<br /><br />" +
+      "<a href='http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html'><img src='http://www.bricknave.net/pics/Wu_badge.jpg' /></a><br />";
+  } else if (result === garmadon) {
+    resultText = "<br /><br /><img src='pics/Garmadon.jpg' /><br /><br />" +
+      "You are most like Lord Garmadon! Ninjas better watch out!<br /><br />" +
+      "Here is the HTML code for the badge:<br /><br />" +
+      "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'><a href='http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html'><img src='http://www.bricknave.net/pics/Garmadon_badge.jpg' /></a></textarea><br /><br />" +
+      "Here is the BBCode for the badge:<br /><br />" +
+      "<textarea rows='3' cols='60' readonly='readonly' onclick='this.select();'>[url=http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html][img]http://www.bricknave.net/pics/Garmadon_badge.jpg[/img][/url]</textarea><br /><br />" +
+      "Here is what it looks like:<br /><br />" +
+      "<a href='http://www.bricknave.net/Bricknave_LEGO_NinjaGo_Quiz.html'><img src='http://www.bricknave.net/pics/Garmadon_badge.jpg' /></a><br />";
+  }
+
+  document.getElementById('quizResult').innerHTML = resultText;
+  document.getElementById('quizResult').scrollIntoView({ behavior: 'smooth' });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  var quizForm = document.getElementById('quizForm');
+  if (quizForm) {
+    quizForm.addEventListener('submit', calculateQuiz);
+  }
+});
+</script>
 
 <div class="header">
 <img src="pics/website/Header.png"></img>
@@ -30,7 +317,7 @@ Evan Mulloy, AKA Bricknave, 2011-now
 <body>
 
 <img class="main" src="pics/NinjaGo_Poster.jpg"></img>
-<form name="quiz" action="Bricknave_LEGO_NinjaGo_Quiz.php" method="post">
+<form id="quizForm">
 <h3>Which NinjaGo character are you?  Take this quiz to find out!</h3>
 <h4>Heavy armor or light Gi?</h4>
 <label><input type="radio" name="question_c" value="armor" CHECKED />Heavy armor</label>
@@ -70,6 +357,8 @@ Evan Mulloy, AKA Bricknave, 2011-now
 <label><input type="radio" name="question_b" value="intelligent" CHECKED />Intelligent</label>
 <button type="submit">Are you ready?<br />Click here to find out which NinjaGo character you are!</button>
 </form>
+
+<div id="quizResult"></div>
 
 <footer>
 <a href="http://www.LEGO.com">LEGO&reg;</a> is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site.
